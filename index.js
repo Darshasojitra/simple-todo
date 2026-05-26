@@ -10,7 +10,7 @@ app.set("view engine","ejs")
 
 const dbName='node-project';
 // const collectionName='todo';
-const collectionName='todo';
+const collectionName='Simple-TODO';
 // const url='mongodb://localhost:27017';
 const url = process.env.MONGO_URL;
 const client=new MongoClient(url);
