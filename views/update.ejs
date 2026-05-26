@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update task</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%-include('nav') %>
+    <h1>Update task page</h1>
+
+     <div class="container">
+        <form class="todo-add-form" action="/update/<%= result._id %>" method="post">
+            <input value="<%=result.title %>" class="todo-add-input-title" type="text" name="title" placeholder="Enter Task Title">
+            <br><br>
+            <textarea  class="todo-add-textarea" name="description" id=""><%=result.description%></textarea>
+            <br><br>
+            <button class="btn">Update task</button>
+        </form>
+    </div>
+
+</body>
+</html>
