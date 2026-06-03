@@ -179,59 +179,11 @@ textarea.input{
     .task-dec {
         font-size: 14px;
         color: #6b7280;
-        /* margin-bottom: 12px; */
     }
-    /* .task-item input {
-        align-self: flex-end;
-        transform: scale(1.2);
-        margin-bottom: 10px;
-    } */
-
     /* buttons container */
     .task-item a {
         text-decoration: none;
     }
-
-    .task-item .del-btn,
-    .task-item .update-btn {
-        /* display: inline-block; */
-        text-align: center;
-        padding: 6px 10px;
-        border-radius: 6px;
-        font-size: 13px;
-    }
-
-    .del-btn {
-        background-color: #ef4444;
-        color: white;
-    }
-
-    .del-btn:hover {
-        background-color: #dc2626;
-    }
-
-    .update-btn {
-        background-color: #3b82f6;
-        color: white;
-        margin-left: 8px;
-    }
-
-    .update-btn:hover {
-        background-color: #2563eb;
-    }
-    .task-item {
-        position: relative;
-    }
-
-    .task-item .del-btn,
-    .task-item .update-btn {
-        margin-top: 8px;
-    }
-    .delete-item {
-        margin-bottom: 20px;
-    }
-
-
 
 }
 
