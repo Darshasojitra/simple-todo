@@ -139,7 +139,7 @@ textarea.input{
 
     .task-list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 cards */
+        grid-template-columns: repeat(2, 1fr); /* 2 cards */
         gap: 20px;
         list-style: none;
         padding: 0;
@@ -193,6 +193,25 @@ textarea.input{
 
 }
 
+@media (min-width: 1000px) {
+     .task-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 cards */
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1500px) {
+     .task-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 cards */
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+    }
+}
 
 
 
