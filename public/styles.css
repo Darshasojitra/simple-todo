@@ -179,15 +179,13 @@ textarea.input{
     .task-dec {
         font-size: 14px;
         color: #6b7280;
-        margin-bottom: 12px;
+        /* margin-bottom: 12px; */
     }
-
-    /* checkbox top-right */
-    .task-item input {
+    /* .task-item input {
         align-self: flex-end;
         transform: scale(1.2);
         margin-bottom: 10px;
-    }
+    } */
 
     /* buttons container */
     .task-item a {
@@ -196,7 +194,7 @@ textarea.input{
 
     .task-item .del-btn,
     .task-item .update-btn {
-        display: inline-block;
+        /* display: inline-block; */
         text-align: center;
         padding: 6px 10px;
         border-radius: 6px;
@@ -221,8 +219,6 @@ textarea.input{
     .update-btn:hover {
         background-color: #2563eb;
     }
-
-    /* button row */
     .task-item {
         position: relative;
     }
@@ -231,32 +227,11 @@ textarea.input{
     .task-item .update-btn {
         margin-top: 8px;
     }
-
-    /* delete selected */
     .delete-item {
         margin-bottom: 20px;
     }
 
 
-    
-     .task-item {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* 🔥 create proper action row */
-    .task-item input,
-    .task-item .del-btn,
-    .task-item .update-btn {
-        margin-top: 10px;
-    }
-
-    /* 🔥 force same row */
-    .task-item input,
-    .task-item .del-btn,
-    .task-item .update-btn {
-        display: inline-block;
-    }
 
 }
 
