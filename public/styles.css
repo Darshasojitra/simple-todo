@@ -126,116 +126,118 @@ textarea.input{
 }
 
 
-
-
-
 /* =========================
-   DESKTOP UI IMPROVEMENT
+   LAPTOP GRID UI
 ========================= */
-
 @media (min-width: 768px) {
 
+    .container {
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+
     .task-list {
-        grid-template-columns: 60px 60px 1.5fr 2fr 180px;
-        border-radius: 8px;
-        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 cards */
+        gap: 20px;
+        list-style: none;
+        padding: 0;
     }
 
-    /* header styling */
-    .list-header {
-        background-color: #1f2937;
-        color: #fff;
-        font-weight: 600;
-        font-size: 14px;
-        border: none;
-    }
-
-    /* row cells */
-    .list-item {
-        background-color: #ffffff;
-        border: none;
-        border-bottom: 1px solid #e5e7eb;
-        font-size: 14px;
+    /* each task card */
+    .task-item {
         display: flex;
-        align-items: center;
-    }
+        flex-direction: column;
+        justify-content: space-between;
 
-    /* alternate row color */
-    .task-list li:nth-child(10n + 6),
-    .task-list li:nth-child(10n + 7),
-    .task-list li:nth-child(10n + 8),
-    .task-list li:nth-child(10n + 9),
-    .task-list li:nth-child(10n + 10) {
-        background-color: #f9fafb;
+        padding: 16px;
+        border-radius: 12px;
+
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+
+        box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        transition: 0.25s ease;
     }
 
     /* hover effect */
-    .task-list li:hover {
-        background-color: #f1f5f9;
-        transition: 0.2s;
+    .task-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
-    /* checkbox center */
-    .list-item input {
-        margin: auto;
-        transform: scale(1.2);
-    }
-
-    /* title bold */
-    .task-list li:nth-child(5n + 3) {
+    /* title */
+    .task-title {
+        font-size: 16px;
         font-weight: 600;
+        margin-bottom: 6px;
         color: #111827;
     }
 
-    /* description styling */
-    .task-list li:nth-child(5n + 4) {
+    /* description */
+    .task-dec {
+        font-size: 14px;
         color: #6b7280;
+        margin-bottom: 12px;
+    }
+
+    /* checkbox top-right */
+    .task-item input {
+        align-self: flex-end;
+        transform: scale(1.2);
+        margin-bottom: 10px;
+    }
+
+    /* buttons container */
+    .task-item a {
+        text-decoration: none;
+    }
+
+    .task-item .del-btn,
+    .task-item .update-btn {
+        display: inline-block;
+        text-align: center;
+        padding: 6px 10px;
+        border-radius: 6px;
         font-size: 13px;
     }
 
-    /* action buttons layout */
-    .task-list li:nth-child(5n + 5) {
-        display: flex;
-        gap: 8px;
-        justify-content: center;
-    }
-
-    /* buttons */
-    .delete-item {
-        width: auto;
-        padding: 6px 12px;
+    .del-btn {
         background-color: #ef4444;
-        border-radius: 6px;
+        color: white;
     }
 
-    .delete-item:hover {
+    .del-btn:hover {
         background-color: #dc2626;
     }
 
-    .update-item {
-        width: auto;
-        padding: 6px 12px;
+    .update-btn {
         background-color: #3b82f6;
-        border-radius: 6px;
+        color: white;
+        margin-left: 8px;
     }
 
-    .update-item:hover {
+    .update-btn:hover {
         background-color: #2563eb;
     }
 
-    /* container */
-    .list-container {
-        max-width: 1100px;
-        margin: 20px auto;
+    /* button row */
+    .task-item {
+        position: relative;
     }
 
-    /* delete multiple button */
-    .delete-multiple {
-        margin: 10px 0;
-        width: auto;
-        padding: 8px 16px;
+    .task-item .del-btn,
+    .task-item .update-btn {
+        margin-top: 8px;
+    }
+
+    /* delete selected */
+    .delete-item {
+        margin-bottom: 20px;
     }
 }
+
 
 
 
